@@ -13,4 +13,4 @@ Project: build MATLAB Functions for various linear algebra operations:
 
 main.m demonstrates each function in use.
 
-example_out.txt shows an example output from main
+example_out.txt shows an example output from main.
