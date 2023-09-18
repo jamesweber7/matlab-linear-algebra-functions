@@ -1,7 +1,7 @@
 function [Q, P] = gram_schmidt(X)
 % Take gram schmidt of augmented matrix X
     [m, n] = size(X);
-    if m > n    % error: matrix does not have full column rank
+    if rank(X) ~= n    % error: matrix does not have full column rank
         Q = "Matrix Does Not Have Full Column Rank";
         return; % return error message
     end

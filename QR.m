@@ -1,7 +1,7 @@
 function [Q,R] = QR(A)
 %Take QR factorization of A
-    [m,n] = size(A);
-    if m > n    % error: matrix does not have full column rank
+    [~,n] = size(A);
+    if rank(A) ~= n    % error: matrix does not have full column rank
         Q = "Matrix Does Not Have Full Column Rank";
         return; % return error message
     end
