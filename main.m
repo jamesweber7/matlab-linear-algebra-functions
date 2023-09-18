@@ -6,9 +6,10 @@
 %   RREF - RREF.m
 %   Solving systems using RREF
 %   LU factorization (section 1.5) - LU.m
-%   Solving systems using the LU (section 1.5)
-%   QR factorization  (section 5.6)
+%   Solving systems using the LU (section 1.5) - LU_solve.m
+%   QR factorization  (section 5.6) - QR.m
 %   Solving least squares problems using the QR factorization (Section 5.6)
+%       - least_squares.m
 
 % Matrix Multiplication - matrix_multiply.m
 m = 12;
@@ -66,7 +67,7 @@ else
     % infinitely many solutions
 end
 
-% LU factorization (section 1.5) - LUify.m
+% LU factorization (section 1.5) - LU.m
 [L, U] = LU(A);
 disp("LU(A) result : ");
 disp(L);
@@ -101,3 +102,15 @@ disp(A2);
 Error = abs(A-A2);
 disp("Error : ");
 disp(Error);
+
+% Solving least squares problems using the QR factorization (Section 5.6)
+x = least_squares(A,b);
+disp("least_squares(A,b) result : ");
+disp(x);
+b2 = matrix_multiply(A,x);
+disp("A*x : ");
+disp(b2);
+Error = abs(b-b2);
+disp("Error : ");
+disp(Error);
+
