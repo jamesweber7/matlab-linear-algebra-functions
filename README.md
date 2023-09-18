@@ -12,3 +12,5 @@ Project: build MATLAB Functions for various linear algebra operations:
 - Gram-Schmidt algorithm - gram_schmidt.m
 
 main.m demonstrates each function in use.
+
+example_out.txt shows an example output from main
